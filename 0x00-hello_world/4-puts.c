@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
- * main - Entery point
+ * main - Entry point
  *
  * Description: A C program that print with puts function
  *
