@@ -3,6 +3,8 @@
 /**
  * main - check the code
  *
+ * Description: function print_alphabet
+ *
  * Return: Always 0.
  */
 
