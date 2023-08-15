@@ -11,7 +11,6 @@
 
 int _islower(int c)
 {
-	int c = 'a';
 
 	for (c = 'a'; c <= 'z'; c++)
 	{
