@@ -3,7 +3,7 @@
 /**
  * main - check the code
  *
- * Description: function print_alphabet
+ * print_alphabet: print alphabet by _putchar function
  *
  * Return: Always 0.
  */
