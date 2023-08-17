@@ -3,20 +3,23 @@
 /**
  * print_line - draws a straight line in the terminal
  *
- * @n: input
+ * @n: number of times
 */
 
 void print_line(int n)
 {
 	int x;
 
-	for (x = 1; x <= n; x++)
-	{
-		_putchar('_');
-	_putchar('\n');
-	}
 	if (n <= 0)
 	{
 		_putchar('\n');
+	}
+	else
+	{
+		for (x = 1; x <= n; x++)
+		{
+			_putchar('_');
+		_putchar('\n');
+		}
 	}
 }
