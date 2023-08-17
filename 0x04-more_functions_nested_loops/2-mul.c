@@ -6,14 +6,10 @@
  * @a: first integer
  * @b: second integer
  *
- * Return: always (0)
+ * Return: return a*b
 */
 
 int mul(int a, int b)
 {
-	int z;
-
-	z = a * b;
-	_putchar(z);
-	return (0);
+	return (a * b);
 }
