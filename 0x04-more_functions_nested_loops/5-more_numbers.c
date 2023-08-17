@@ -18,12 +18,12 @@ void more_numbers(void)
 				_putchar(y + '0');
 			}
 			else
-				if (y == 10 && y == 11
-				 && y == 12 && y == 13 && y == 14)
+				if (y == 10 || y == 11
+				 || y == 12 || y == 13 || y == 14)
 			{
-				_putchar(1 + (y % 10));
+				_putchar('1' + (y % 10));
 			}
 		}
-		_putchar("\n");
+		_putchar('\n');
 	}
 }
