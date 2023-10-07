@@ -1,5 +1,5 @@
 #include "main.h"
-
+#include <stdio.h>
 /**
 * main - entry point
 *
@@ -26,7 +26,7 @@ int main(int argc, char **argv)
 	}
 
 	file_to = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC,
-		S_IRUSER | S_IWUSER | S_IRGRP | S_IWGRP | S_IROTH);
+		S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH);
 	if (file_to == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't write to NAME_OF_THE_FILE %s\n", argv[2]);
