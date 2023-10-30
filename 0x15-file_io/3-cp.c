@@ -24,7 +24,7 @@ int main(int argc, char **argv)
 		exit(98);
 	}
 	file_to = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC,
-	S_IRUSR | S_IWUSR | S_IRGR | S_IWGRP | S_IROTH);
+	S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH);
 	if (file_to == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
@@ -42,13 +42,13 @@ int main(int argc, char **argv)
 		n2 = write(file_to, d, n1);
 		if (n2 < n1)
 		{
-			dprintf(STDERR_FILENO, "Error: Can't write to %s/n", argv[2]);
+			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
 			exit(99);
 		}
 	}
 	if (close(file_from) == -1)
-		dprintf(STDERR_FILENO, "Error: Can't Close %d\n"), exit(100);
+		dprintf(STDERR_FILENO, "Error: Can't Close %d\n", file_from), exit(100);
 	if (close(file_to) == -1)
-		dprintf(STDERR_FILENO, "Error: Can't close %d\n"), exit(100);
+		dprintf(STDERR_FILENO, "Error: Can't close %d\n", file_to), exit(100);
 	return (0);
 }
