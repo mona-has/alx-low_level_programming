@@ -28,7 +28,6 @@ int main(int argc, char **argv)
 	if (file_to == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
-		close(file_from);
 		exit(99);
 	}
 	while (n1 == 1024)
