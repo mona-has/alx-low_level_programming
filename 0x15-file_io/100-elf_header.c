@@ -8,24 +8,19 @@
 #include <stdlib.h>
 
 /**
-* _elf - entry point
+* main - entry point
 *
-* @ptr: pointer
+* @argc: argument numbers
+* @argv: string
 *
-* Return: void
+* Return: always 0
 */
 
-void _elf(unsigned char *ptr)
+int main(int argc, char **argv)
 {
-	int s;
+	int x;
 
-	for (s = 0; s < 4; s++)
-	{
-		if (*ptr != 127 && *ptr != 'E' && *ptr != 'L' &&
-		*ptr != 'F')
-		{
-			dprintf(STDERR_FILENO, "Error\n");
-			exit(98);
-		}
-	}
+	for (x = 0; x < argc; x++)
+		printf("Error\n %s", argv[x]);
+	return (0);
 }
