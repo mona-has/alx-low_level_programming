@@ -1,12 +1,31 @@
-#include "main.h"
+
+#include <elf.h>
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <fcntl.h>
+#include <unistd.h>
+#include <stdio.h>
+#include <stdlib.h>
 
 /**
-* _moo_on - entry point
+* _elf - entry point
 *
-* Return: always 0
+* @ptr: pointer
+*
+* Return: void
 */
 
-int _moo_on(void)
+void _elf(unsigned char *ptr)
 {
-	return (0);
+	int s;
+
+	for (s = 0; s < 4; s++)
+	{
+		if (*ptr != 127 && *ptr != 'E' && *ptr != 'L' &&
+		*ptr != 'F')
+		{
+			dprintf(STDERR_FILENO, "Error\n");
+			exit(98);
+		}
+	}
 }
